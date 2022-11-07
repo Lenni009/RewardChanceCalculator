@@ -4,8 +4,9 @@
 	display: block;
 }
 
-.container {
-	padding: 2em 0;
+nav {
+	margin: 1em 0;
+	font-size: large;
 }
 
 label {
