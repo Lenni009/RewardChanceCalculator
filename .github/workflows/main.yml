@@ -12,6 +12,3 @@ jobs:
         username: 'Lenni009'
         reponame: 'RewardChanceCalculator'
         token: ${{ secrets.GITHUB_TOKEN }}
-      env:
-        VUE_APP_KEY: ${{ secrets.VUE_APP_KEY }}
-        VUE_APP_URL: ${{ secrets.VUE_APP_URL }}
