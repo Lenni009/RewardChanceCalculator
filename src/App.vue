@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+let output: string;
 </script>
 
 <template>
@@ -8,12 +7,11 @@ import HelloWorld from './components/HelloWorld.vue'
 		<div class="columns is-desktop">
 			<div class="column is-full-mobile">
 				<label for="EXMLinput">Paste EXML here:</label>
-				<textarea id="EXMLinput" autofocus></textarea>
+				<textarea id="EXMLinput" v-model="output" autofocus></textarea>
 			</div>
 			<div class="column is-full-mobile">
 				<div style="font-weight:bold">Output</div>
-				<div id="output">
-				</div>
+				<div id="output">{{ output }}</div>
 			</div>
 		</div>
 	</div>
@@ -36,6 +34,18 @@ label {
 textarea {
 	background-color: var(--color-background-soft);
 	height: 85vh;
-	width: 35vw;
+	width: 99%;
+	padding: 0 5px;
+	border-radius: 5px;
+	resize: vertical;
+}
+
+#output {
+	display: grid;
+	border: 1px solid black;
+}
+
+#output>div {
+	border: 1px solid black;
 }
 </style>
