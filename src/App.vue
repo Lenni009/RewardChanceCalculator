@@ -3,16 +3,32 @@ import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 </script>
 
+<script lang="ts">
+export default {
+  data() {
+    return {
+      output: 0
+    }
+  },
+	methods: {
+		onKeyUp(event) {
+			this.output = event.target.value;
+		}
+	}
+}
+</script>
+
 <template>
 	<div class="container">
 		<div class="columns is-desktop">
 			<div class="column is-full-mobile">
 				<label for="EXMLinput">Paste EXML here:</label>
-				<textarea id="EXMLinput" autofocus></textarea>
+				<textarea id="EXMLinput" autofocus @keyup="onKeyUp"></textarea>
 			</div>
 			<div class="column is-full-mobile">
 				<div style="font-weight:bold">Output</div>
 				<div id="output">
+					{{ output }}
 				</div>
 			</div>
 		</div>
