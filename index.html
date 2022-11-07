@@ -4,8 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./lib/style.css">
 	<title>Reward Chance Calculator</title>
+	<script data-main="scripts/main.js" src="scripts/require.js"></script>
+	<link rel="stylesheet" href="./lib/style.css">
 </head>
 
 <body>
@@ -13,7 +14,7 @@
 		<div class="columns is-desktop">
 			<div class="column is-full-mobile">
 				<label for="EXMLinput">Paste EXML here:</label>
-				<textarea id="EXMLinput" autofocus></textarea>
+				<textarea id="EXMLinput" autofocus oninput="parseXML(this.id)"></textarea>
 			</div>
 			<div class="column is-full-mobile">
 				<div style="font-weight:bold">Output</div>
