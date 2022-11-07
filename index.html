@@ -1,18 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./lib/style.css">
+	<title>Reward Chance Calculator</title>
+</head>
 
-
-
-
-
-<div class="container">
-	<div class="columns is-desktop">
-		<div class="column is-full-mobile">
-			<label for="EXMLinput">Paste EXML here:</label>
-			<textarea id="EXMLinput" v-model="output" autofocus></textarea>
-		</div>
-		<div class="column is-full-mobile">
-			<div style="font-weight:bold">Output</div>
-			<div id="output">{{ output }}</div>
+<body>
+	<div class="container">
+		<div class="columns is-desktop">
+			<div class="column is-full-mobile">
+				<label for="EXMLinput">Paste EXML here:</label>
+				<textarea id="EXMLinput" v-model="output" autofocus></textarea>
+			</div>
+			<div class="column is-full-mobile">
+				<div style="font-weight:bold">Output</div>
+				<div id="output">{{ output }}</div>
+			</div>
 		</div>
 	</div>
-</div>
+</body>
+
+</html>
