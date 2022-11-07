@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Reward Chance Calculator</title>
+	<script src="./lib/logic.js"></script>
+	<link rel="stylesheet" href="./lib/style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="columns is-desktop">
+			<div class="column is-full-mobile">
+				<label for="EXMLinput">Paste EXML here:</label>
+				<textarea id="EXMLinput" autofocus oninput="parseXML(this.id, 'output')"></textarea>
+			</div>
+			<div class="column is-full-mobile">
+				<div style="font-weight:bold">Output</div>
+				<div id="output" style="display: none;"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
