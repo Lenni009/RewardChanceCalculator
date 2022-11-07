@@ -1,7 +1,13 @@
 name: Build Vue
-on: [push]
+on:
+  pull_request:
+    branches: 
+      - main
+    types: [closed]
+
 jobs:
   build_vue:
+    if: ${{ github.event.pull_request.merged }}
     runs-on: ubuntu-latest
     name: Build Vue
     steps:
