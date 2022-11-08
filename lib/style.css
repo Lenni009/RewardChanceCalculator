@@ -1,12 +1,31 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
+
+
+@media only screen and (max-width: 1023px) {
+	.container {
+		margin: 0 1em;
+	}
+}
+
 .column>* {
 	display: block;
 }
 
 nav {
+	display: flex;
+	flex-wrap: wrap;
 	margin: 1em 0;
 	font-size: large;
+}
+
+nav>*:first-child {
+	margin-right: auto;
+}
+
+nav>*:last-child {
+	flex-basis: 100%;
+	text-align: right;
 }
 
 label {
